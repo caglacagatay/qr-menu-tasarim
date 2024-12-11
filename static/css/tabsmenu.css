@@ -1,0 +1,145 @@
+body {
+    background-color: #F5F5DC !important;
+    height: 100% !important;
+    margin: 0 !important;
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+    background-color: #F5F5DC;
+    color: #4A3C31;
+}
+
+.header img {
+    width: 150px;
+    height: auto;
+    object-fit: cover;
+}
+
+.tablink {
+    background-color: #4A3C31;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 25%;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.tablink:hover {
+    background-color: #777;
+}
+
+.tabcontent {
+    display: none;
+    padding: 20px;
+    overflow: auto;
+    min-height: 200px;
+    min-width: 100%;
+    width: auto;
+    box-sizing: border-box;
+}
+
+.tabcontent h3 {
+    font-weight: 600;
+}
+
+/* tab content id */
+#baslangic {
+    background-color: #e06a3828;
+}
+
+#anayemek {
+    background-color: rgba(218, 165, 32, 0.21);
+}
+
+#icecekler {
+    background-color: #556b2f15;
+}
+
+#tatli {
+    background-color: #c3317c23;
+}
+
+footer {
+    background-color: #4A3C31;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Restoran bilgileri */
+.restaurant-info {
+    flex: 1;
+    margin-bottom: 15px;
+}
+
+.restaurant-info p {
+    margin: 5px 0;
+}
+
+/* Sosyal Medya İkonları */
+.social-icons {
+    flex: 1;
+    text-align: center;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.social-icons a:hover {
+    color: #c6c5c5;
+}
+
+/* E-posta Aboneliği */
+.newsletter {
+    flex: 1;
+    text-align: right;
+}
+
+.newsletter input[type="email"] {
+    padding: 5px;
+    border: none;
+    border-radius: 3px;
+}
+
+.newsletter button {
+    padding: 5px 10px;
+    background-color: #c3317d;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+/* Responsive düzen */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .newsletter {
+        text-align: center;
+        margin-top: 10px;
+    }
+}

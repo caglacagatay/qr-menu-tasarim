@@ -1,0 +1,276 @@
+
+* {
+    box-sizing: border-box;
+}
+
+*::-webkit-scrollbar {
+    display: none !important;
+}
+
+body {
+    background-color: #d7b59e9b !important;
+    font-family: 'Courier New', Courier, monospace !important;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+header {
+    background: #141a0b;
+    color: #fff;
+    padding: 20px 0;
+    background-image: url('https://png.pngtree.com/background/20231016/original/pngtree-aesthetic-cafe-and-co-working-space-with-3d-rendered-elements-picture-image_5582747.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: brightness(80%);
+    height: 150px;
+    position: relative;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+.navbar-brand {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+.search-form {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    position: relative;
+    text-align: center;
+}
+
+.search-form #search {
+    display: none;
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    transform: translateY(-50%);
+    width: 300px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    color: #141a0b;
+    background: white;
+    border-radius: 10px;
+}
+
+.search-form.active #search {
+    display: inline-block;
+}
+
+.search-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-icon i {
+    border: none;
+    background: transparent;
+    color: white;
+    font-size: 30px;
+}
+
+.search-icon i:focus+#search,
+#search:focus {
+    display: inline-block;
+    border: none;
+}
+
+/*footer*/
+.footer {
+    background: #141a0b;
+    color: #ffffff;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-content {
+    text-align: center;
+}
+
+.footer-icons {
+    margin: 10px 0;
+}
+
+.footer-icons a {
+    color: #ffffff;
+    font-size: 24px;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.footer-company-name {
+    margin-top: 10px;
+}
+
+.footer h3 {
+    font-weight: bold;
+}
+
+/*ekran boyutuna göre card ayarları*/
+
+.card-wrapper {
+    max-width: 900px;
+    width: 100%;
+    height: max-content;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-auto-rows: 160px;
+    gap: 20px;
+    padding: 30px 0px;
+}
+
+@media (max-width: 576px) {
+    header {
+        height: auto;
+    }
+
+    .card-wrapper {
+        grid-auto-rows: 120px;
+        gap: 10px;
+        padding: 30px;
+    }
+
+    #search {
+        width: 150px !important;
+    }
+
+    .home-button-container {
+        position: static;
+        transform: translate(0);
+    }
+
+    .item-box-detail h4 {
+        font-size: 14px;
+        min-width: max-content;
+    }
+
+    .item-box-detail p {
+        font-size: 12px;
+    }
+}
+
+.card-wrapper a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay span {
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.card-wrapper .card-wrapper__each {
+    display: flex;
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+.col-2-row-1 {
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+.col-1-row-1 {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.col-1-row-3 {
+    grid-column: span 1;
+    grid-row: span 3;
+}
+
+
+/*kategori detay*/
+
+.home-button-container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 30px;
+    width: 100%;
+    text-align: center;
+}
+
+.home-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color:rgba(0, 0, 0, 0.341);
+    text-decoration: none;
+    border-radius: 1241px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 2px solid #fff;
+    font-weight: bold;
+}
+
+.home-button:hover {
+    background-color: rgba(0, 0, 0, 0.523);
+}
+
+.category-name {
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+    color: #141a0b;
+}
+
+.item-box-detail h4 {
+    color: #141a0b;
+    font-weight: bold;
+    min-width: max-content;
+}
+
+.item-box-detail p {
+    color: #141a0b;
+}
+
+hr.dotted {
+    border-top: 3px dotted #141a0b;
+    min-width: 50px;
+    width: 100%;
+}
+
+
+
